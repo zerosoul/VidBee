@@ -16,7 +16,7 @@ COPY packages/downloader-core/package.json packages/downloader-core/package.json
 COPY packages/i18n/package.json packages/i18n/package.json
 COPY packages/ui/package.json packages/ui/package.json
 
-RUN pnpm install --filter "{./apps/web}..." --frozen-lockfile --ignore-scripts
+RUN pnpm install --filter "{./apps/web}..." --no-frozen-lockfile --ignore-scripts
 
 COPY apps/web apps/web
 COPY packages/downloader-core packages/downloader-core
