@@ -18,7 +18,7 @@ COPY packages/downloader-core/package.json packages/downloader-core/package.json
 COPY packages/task-queue/package.json packages/task-queue/package.json
 COPY packages/subscriptions-core/package.json packages/subscriptions-core/package.json
 
-RUN pnpm install --filter "{./apps/api}..." --frozen-lockfile
+RUN pnpm install --filter "{./apps/api}..." --no-frozen-lockfile
 
 COPY apps/api apps/api
 COPY apps/desktop/resources/drizzle apps/desktop/resources/drizzle
